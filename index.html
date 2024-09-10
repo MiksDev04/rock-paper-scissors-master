@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">  
+  <link rel="stylesheet" href="icon-animation.css">
+  <script src="script.js" defer></script>
+  <title>Frontend Mentor | Rock, Paper, Scissors, Lizard, Spock</title>
+
+</head>
+<body>
+  <main class="game-container">
+    <header>
+      <div class="title">
+        <img src="./images/logo-bonus.svg" alt="">
+      </div>
+      <div class="score-container">
+        <span>SCORE</span>
+        <h1 class="score"></h1>
+      </div>
+    </header>
+    <section class="game-board">
+      <!-- pentagon -->
+      <img class="pentagon" src="./images/bg-pentagon.svg" alt="pentagon">
+
+      <!-- computer picked -->
+      <div class="house-picked">
+        <div class="inside">
+          <img src="">
+        </div>
+      </div>
+
+      <!-- scissor -->
+      <div class="scissor weapons">
+          <div class="inside">
+          <img src="./images/icon-scissors.svg" alt="scissor">
+        </div>
+      </div>
+
+      <!-- paper -->
+      <div class="paper weapons">
+        <div class="inside">
+          <img src="./images/icon-paper.svg" alt="paper">
+        </div>
+      </div>
+      
+      
+      <!-- rock -->
+      <div class="rock weapons">
+        <div class="inside">
+          <img src="./images/icon-rock.svg" alt="rock">
+        </div>
+      </div>
+      
+      <!-- lizard -->
+       <div class="lizard weapons">
+        <div class="inside">
+          <img src="./images/icon-lizard.svg" alt="">
+        </div>
+       </div>
+
+      <!-- spock -->
+      <div class="spock weapons">
+        <div class="inside">
+          <img src="./images/icon-spock.svg" alt="spock">
+        </div>
+      </div>
+    </section>
+    <button class="rule-button" onclick="document.querySelector('dialog').style.display = 'grid'; document.querySelector('.rules-section').showModal();">
+      RULES
+    </button>
+  </main>
+  <dialog class="rules-section">
+    <H1>RULES</H1>
+    <img src="./images/image-rules-bonus.svg" alt="">
+    <button class="exit-rule" onclick="document.querySelector('dialog').style.display = 'none'; document.querySelector('.rules-section').close();">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"><path fill="#3B4262" fill-rule="evenodd" d="M16.97 0l2.122 2.121-7.425 7.425 7.425 7.425-2.121 2.12-7.425-7.424-7.425 7.425L0 16.97l7.425-7.425L0 2.121 2.121 0l7.425 7.425L16.971 0z" opacity=".25"/></svg>
+    </button>
+  </dialog>
+  <dialog class="winner-announce-section">
+    <h1 class="declared-winner">YOU WIN</h1>
+    <button class="play-again">
+      PLAY AGAIN
+    </button>
+  </dialog>
+</body>
+</html>
